@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<style>
+	a{
+  text-decoration:none;
+}
+.text-center{
+  text-align:center;
+}
+.underline{
+  text-decoration:underline;
+}
+
+.nav-wrapper{
+  background:#50c878;
+}
+.about-text{
+  font-size:16px;
+  font-weight:500;
+  margin-top:10%;
+}
+.profile-pic{
+  width: 100%;
+  border-radius:50%;
+}
+#portfolio{
+  background:#f0f0f0;
+}
+#port-1 img{
+  width:100%;
+}
+#port-2 img{
+  width:100%;
+}
+.contact-text p{
+  font-size: 20px;
+}
+.social-icons li {
+  display:inline-block;
+  font-size: 28px;
+  padding: 0 15px;
+}
+.fa-snapchat-ghost{
+  color:#fff;
+}
+.fa-instagram{
+  color:#fff;
+}
+#insta{
+  padding:0 5px;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.page-footer{
+  background:#616161;
+}
+.footer-copyright{
+  text-align: center;
+}
+.section{
+  padding-top:60px;
+}
+
+</style>
+<body>	
 <!-- navbar  -->
 <div class="navbar-fixed">
     <nav>
@@ -116,5 +181,14 @@
             </div>
           </div>
         </footer>
+<script>
+	$("nav").find("a").click(function(e) {
+    e.preventDefault();
+    var section = $(this).attr("href");
+    $("html, body").animate({
+        scrollTop: $(section).offset().top
+    });
+});
+</script>
 </body>
 </html>
