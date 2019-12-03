@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Advance Hover</title>
+</head>
+<body>
+<style>
+/* 3D Transform. Craeted refering to Dudley Storey's Pen: https://codepen.io/dudleystorey/pen/KFLJp */
+.tdimension {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto 40px auto;
+    perspective: 1000px;
+}
+.tdimension a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/e8346826957515.56361c2106f3f.png"); */
+    background: url("https://ichef.bbci.co.uk/images/ic/624x351/p06m42b3.jpg");
+    background-size: cover;
+    transform-style: preserve-3d;
+    transform: rotateX(70deg);
+    transition: all 0.8s;   
+}
+.tdimension:hover a {
+    transform: rotateX(20deg);  
+}   
+.tdimension a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));    
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
+</style>	
+
+    <h2>3D Hover Effect</h2>
+    <div class = "row">
+        <div class = "tdimension">
+            <a href = "#">
+            	<span>Link</span>
+            </a>
+    </div>
+    </div>
+
+
+</body>
+</html>
